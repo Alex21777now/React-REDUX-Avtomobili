@@ -1,10 +1,10 @@
 {
   "name": "redux",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "dev": "webpack",
-    "start": "node server.js"
+    "start": "webpack-dev-server"
   },
   "license": "ISC",
   "dependencies": {
