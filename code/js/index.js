@@ -15,6 +15,9 @@ var io = require('socket.io').listen(server);
 const PORT = process.env.PORT || 80
 server.listen(PORT, () => {console.log('Server has been started...')})
 
+app.get('/', function(request, respons) {
+   respons.sendFile(__dirname + '/index.html');
+});
 
 ReactDOM.render(
   <Provider store={store}>
