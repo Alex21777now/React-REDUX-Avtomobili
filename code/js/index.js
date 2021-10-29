@@ -7,6 +7,16 @@ import WebPage from './components/WebPage';
 
 const store = createStore (allReducers);
 
+const express = require('express')
+const app = express()
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
+
+const PORT = process.env.PORT || 80
+server.listen(PORT, () => {console.log('Server has been started...')})
+
+
+
 ReactDOM.render(
   <Provider store={store}>
     <WebPage />
